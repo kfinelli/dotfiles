@@ -20,6 +20,10 @@ set showmatch
 set incsearch
 set hlsearch
 
+" current line displays abs line number, others show relative
+set number
+set relativenumber
+
 set autoindent
 set ignorecase
 set background=dark
