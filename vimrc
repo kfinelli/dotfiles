@@ -16,6 +16,12 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+" highlight overlength lines
+set textwidth=80
+set formatoptions=cq
+set colorcolumn=+1
+highlight ColorColumn ctermbg=grey
+
 set showmatch
 set incsearch
 set hlsearch
