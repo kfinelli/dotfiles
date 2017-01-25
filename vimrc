@@ -20,7 +20,7 @@ endif
 set textwidth=80
 set formatoptions=cq
 set colorcolumn=+1
-highlight ColorColumn ctermbg=grey
+highlight ColorColumn ctermbg=grey ctermfg=darkgrey
 
 set showmatch
 set incsearch
