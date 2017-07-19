@@ -45,6 +45,9 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 export EDITOR='vim'
+alias g='git'
+alias gst='git status'
+glog='git log --oneline --decorate --color --graph'
 
 autoload -U promptinit
 promptinit
