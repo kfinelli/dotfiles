@@ -49,3 +49,6 @@ export EDITOR='vim'
 autoload -U promptinit
 promptinit
 prompt bigfade
+source $HOME/.dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
