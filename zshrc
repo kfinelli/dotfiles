@@ -41,13 +41,14 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ll='ls -l'
+alias ll='ls -lh'
 alias la='ls -A'
 alias l='ls -CF'
+alias lt='ls -lhtr'
 export EDITOR='vim'
 alias g='git'
 alias gst='git status'
-glog='git log --oneline --decorate --color --graph'
+alias glog='git log --oneline --decorate --color --graph'
 
 autoload -U promptinit
 promptinit
@@ -55,3 +56,4 @@ prompt bigfade
 source $HOME/.dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
