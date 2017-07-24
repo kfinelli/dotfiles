@@ -35,6 +35,7 @@ local fadebar='blue'
 local userhost='white'
 local date='white'
 local cwd='yellow'
+local vcs='white'
 
 local -A schars
 autoload -Uz prompt_special_chars
@@ -43,13 +44,13 @@ prompt_special_chars
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' actionformats \
-    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
+    "%B%F{$vcs}(%s)-[%a] %f "
 zstyle ':vcs_info:*' formats       \
-    '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+    "%B%F{$vcs}(%s)-[%b] %f "
+zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat "%b:%r"
 precmd() { vcs_info }
 
-PS1="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$userhost}%K{$fadebar}%n@%m%b%k%f%F{$fadebar}%K{black}$schars[260]$schars[261]$schars[262]$schars[333]%b%f%k%F{$fadebar}%K{black}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$date}%K{black} %D{%a %b %d} %D{%H:%M:%S} %B%F{$cwd}%K{black}%d%b%f%k "'${vcs_info_msg_0_}'"
+PS1="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$userhost}%K{$fadebar}%n@%m%b%k%f%F{$fadebar}%K{black}$schars[260]$schars[261]$schars[262]$schars[333]%b%f%k%F{$fadebar}%K{black}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$date}%K{black} %D{%a %b %d} %D{%H:%M:%S} %B%F{$cwd}%K{black}%d%b%f%k "'${vcs_info_msg_0_}'"%b 
 > "
 PS2="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%b%F{$fadebar}%K{black}$schars[260]$schars[261]$schars[262]$schars[333]%F{$fadebar}%K{black}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$fadebar}>%b%f%k "
 
