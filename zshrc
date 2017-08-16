@@ -80,8 +80,13 @@ alias g='git'
 alias gst='git status'
 alias glog='git log --oneline --decorate --color --graph'
 
+zhistorysearch=$HOME/.dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
+zsyntaxhighlight=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#local settings from ~/.shell_local
+[ -f $HOME/.shell_local ] && . $HOME/.shell_local
+
 setprompt
-source $HOME/.dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $zhistorysearch
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $zsyntaxhighlight
