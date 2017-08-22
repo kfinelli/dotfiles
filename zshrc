@@ -57,7 +57,7 @@ PS2="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%b%F{$fadebar
 #prompt_opts=(cr subst percent)
 }
 
-setopt INC_APPEND_HISTORY PROMPT_SUBST
+setopt INC_APPEND_HISTORY PROMPT_SUBST HIST_IGNORE_ALL_DUPS
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -81,7 +81,7 @@ alias gst='git status'
 alias glog='git log --oneline --decorate --color --graph'
 
 zhistorysearch=$HOME/.dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
-zsyntaxhighlight=/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+zsyntaxhighlight=$HOME/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #local settings from ~/.shell_local
 [ -f $HOME/.shell_local ] && . $HOME/.shell_local
 
