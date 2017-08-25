@@ -43,11 +43,13 @@ prompt_special_chars
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:*' actionformats \
-    "%B%F{$vcs}(%s)-[%a] %f "
-zstyle ':vcs_info:*' formats       \
-    "%B%F{$vcs}(%s)-[%b] %f "
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat "%b:%r"
+#zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' actionformats "%B%F{$vcs}(%s)-[%a] %c%u "
+zstyle ':vcs_info:*' formats       "%B%F{$vcs}(%s)-[%b] %c%u "
+zstyle ':vcs_info:*' stagedstr     "%F{green}+%f"
+zstyle ':vcs_info:*' unstagedstr   "%F{green}!%f"
+
+#zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat "%b:%r"
 precmd() { vcs_info }
 
 PS1="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$userhost}%K{$fadebar}%n@%m%b%k%f%F{$fadebar}%K{black}$schars[260]$schars[261]$schars[262]$schars[333]%b%f%k%F{$fadebar}%K{black}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$date}%K{black} %D{%a %b %d} %D{%H:%M:%S} %B%F{$cwd}%K{black}%d%b%f%k "'${vcs_info_msg_0_}'"%b 
