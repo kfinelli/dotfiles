@@ -1,5 +1,4 @@
 # Print the message.                                                             
-cat <<-EOF                                                                       
-                                                                                 
-  -- See you, space cowboy                                                       
-EOF                                                                              
+echo
+echo
+echo '  -- See you, space cowboy'
