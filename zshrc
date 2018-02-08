@@ -59,7 +59,7 @@ PS2="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%b%F{$fadebar
 #prompt_opts=(cr subst percent)
 }
 
-setopt INC_APPEND_HISTORY PROMPT_SUBST HIST_IGNORE_ALL_DUPS
+setopt INC_APPEND_HISTORY PROMPT_SUBST HIST_IGNORE_ALL_DUPS SHAREHISTORY
 
 #enable recent directory stack with cd -[tab]
 DIRSTACKSIZE=20
