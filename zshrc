@@ -60,6 +60,13 @@ PS2="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%b%F{$fadebar
 }
 
 setopt INC_APPEND_HISTORY PROMPT_SUBST HIST_IGNORE_ALL_DUPS
+
+#enable recent directory stack with cd -[tab]
+DIRSTACKSIZE=20
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushd_minus
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -78,6 +85,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lt='ls -lhtr'
 export EDITOR='vim'
+export PATH=${PATH}:${HOME}/.local/bin/:${HOME}/bin
 alias g='git'
 alias gst='git status'
 alias glog='git log --oneline --decorate --color --graph'
