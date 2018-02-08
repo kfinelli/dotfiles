@@ -43,5 +43,7 @@ set softtabstop=4
 
 set t_Co=256
 
+set belloff=all
+
 " tab completion 'bash-like'
 set wildmode=longest,list
