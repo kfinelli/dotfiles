@@ -179,3 +179,15 @@ bar {
 bindsym $mod+x exec scrot ~/Pictures/screenshot-$(date +%s).png
 # take screenshot with selected size
 bindsym $mod+Shift+x exec sleep 0.1 && scrot -s ~/Pictures/screenshot-$(date +%s).png
+
+# volume control keys
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%   # -5% (down)
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%   # +5% (up)
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle   # toggle mute
+
+#wifi key
+bindsym XF86WLAN exec nmcli radio wifi $(nmcli r wifi | grep enabled -c | sed -e "s/1/off/" | sed -e "s/0/on/")
+
+#multihead
+bindsym $mod+Shift+greater move workspace to output right
+bindsym $mod+Shift+less move workspace to output left
