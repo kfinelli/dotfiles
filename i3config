@@ -178,7 +178,7 @@ bar {
 # take screenshot
 bindsym $mod+x exec scrot ~/Pictures/screenshot-$(date +%s).png
 # take screenshot with selected size
-bindsym $mod+Shift+x exec sleep 0.1 && scrot -s ~/Pictures/screenshot-$(date +%s).png
+bindsym --release $mod+Shift+x exec scrot -s ~/Pictures/screenshot-$(date +%s).png
 
 # volume control keys
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%   # -5% (down)
