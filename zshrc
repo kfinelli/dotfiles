@@ -89,6 +89,7 @@ export PATH=${PATH}:${HOME}/.local/bin/:${HOME}/bin
 alias g='git'
 alias gst='git status'
 alias glog='git log --oneline --decorate --color --graph'
+alias 'rls'='noglob rucio ls --filter type=CONTAINER --short'
 
 zhistorysearch=$HOME/.dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
 zsyntaxhighlight=$HOME/.dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
