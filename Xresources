@@ -1,0 +1,6 @@
+XTerm.vt100.reverseVideo: true
+UXTerm.vt100.reverseVideo: true
+XTerm.termName: xterm-256color
+UXTerm.termName: xterm-256color
+UXTerm*visualBell: false
+UXTerm.vt100.faceName: DejaVu Sans Mono:size=9

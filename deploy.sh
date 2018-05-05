@@ -6,7 +6,10 @@ if tmux -V | grep "1." 2>&1; then
 elif command -v tmux  2>&1; then 
   ln -s $HOME/.dotfiles/tmux.conf $HOME/.tmux.conf
 fi
+
+#gui stuff
 mkdir -p $HOME/.config/i3
 ln -s $HOME/.dotfiles/i3config $HOME/.config/i3/config
+ln -s $HOME/.dotfiles/Xresources $HOME/.Xresources
 
 #&& tmux -V | grep "1."> /dev/null  2>&1 || 

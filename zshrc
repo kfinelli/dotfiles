@@ -52,7 +52,7 @@ zstyle ':vcs_info:*' unstagedstr   "%F{green}!%f"
 #zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat "%b:%r"
 precmd() { vcs_info }
 
-PS1="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$userhost}%K{$fadebar}%n@%m%b%k%f%F{$fadebar}%K{black}$schars[260]$schars[261]$schars[262]$schars[333]%b%f%k%F{$fadebar}%K{black}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$date}%K{black} %D{%a %b %d} %D{%H:%M:%S} %B%F{$cwd}%K{black}%d%b%f%k "'${vcs_info_msg_0_}'"%b 
+PS1="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$userhost}%K{$fadebar}%n@%m%b%k%f%B%F{$fadebar}%K{black}$schars[260]$schars[261]$schars[262]$schars[333]%b%f%k%B%F{$fadebar}%K{black}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$date}%K{black} %D{%a %b %d} %D{%H:%M:%S} %B%F{$cwd}%K{black}%d%b%f%k "'${vcs_info_msg_0_}'"%b
 > "
 PS2="%B%F{$fadebar}$schars[333]$schars[262]$schars[261]$schars[260]%b%F{$fadebar}%K{black}$schars[260]$schars[261]$schars[262]$schars[333]%F{$fadebar}%K{black}$schars[333]$schars[262]$schars[261]$schars[260]%B%F{$fadebar}>%b%f%k "
 
