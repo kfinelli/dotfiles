@@ -16,11 +16,11 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-" highlight overlength lines
 set textwidth=80
 set formatoptions=cq
-set colorcolumn=+1
-highlight ColorColumn ctermbg=grey ctermfg=darkgrey
+" highlight overlength lines
+" set colorcolumn=+1
+" highlight ColorColumn ctermbg=grey ctermfg=darkgrey
 
 set showmatch
 set incsearch
@@ -28,7 +28,7 @@ set hlsearch
 
 " current line displays abs line number, others show relative
 set number
-set relativenumber
+" set relativenumber
 
 set autoindent
 set ignorecase
