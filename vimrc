@@ -18,7 +18,6 @@ endif
 
 set textwidth=80
 set formatoptions=cq
-" highlight overlength lines
 " set colorcolumn=+1
 " highlight ColorColumn ctermbg=grey ctermfg=darkgrey
 
@@ -35,8 +34,8 @@ set ignorecase
 set background=dark
 
 set ruler
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set smarttab
 set expandtab
 set softtabstop=4
